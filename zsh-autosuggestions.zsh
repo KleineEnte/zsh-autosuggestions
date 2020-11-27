@@ -550,7 +550,7 @@ _zsh_autosuggest_capture_setup() {
 	fi
 
 	# Try to avoid any suggestions that wouldn't match the prefix
-	zstyle ':completion:*' matcher-list ''
+	zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 	zstyle ':completion:*' path-completion false
 	zstyle ':completion:*' max-errors 0 not-numeric
 
